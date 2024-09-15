@@ -1,0 +1,14 @@
+# .idea
+.idea
+
+# Compiled class file
+*.class
+
+# package files
+*.jar
+
+# output directory
+/out
+
+# IntelliJ project files
+*.iml

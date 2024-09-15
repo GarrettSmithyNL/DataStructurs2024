@@ -3,18 +3,33 @@ public class Problem1 {
 
   public static double[] getNumOfTemps() {
     Scanner scanner = new Scanner(System.in);
+    double[] temps;
+    int numOfTemps;
     System.out.println("Enter the number of temperatures: ");
-    try {
-      int n = scanner.nextInt();
-      double[] temps = new double[n];
-      for (int i = 0; i < n; i++) {
+    while (true) {
+      try {
+        numOfTemps = scanner.nextInt();
+        temps = new double[numOfTemps];
+        if (numOfTemps > 0) {
+          break;
+        } else {
+          System.out.println("Invalid input. Please enter a number greater than 0:");
+        }
+      } catch (Exception e) {
+        System.out.println("Invalid input. Please enter a valid number:");
+        scanner.nextLine();
+      }
+    }
+    for (int i = 0; i < numOfTemps; i++) {
+      try {
         System.out.println("Enter temperature " + (i + 1) + ": ");
         temps[i] = scanner.nextDouble();
+      } catch (Exception e) {
+        System.out.println("Invalid input. Please enter a valid number.");
+        scanner.nextLine();
+        i--;
       }
-    } catch (Exception e) {
-      System.out.println("Invalid input. Please enter a valid number.");
     }
-
     scanner.close();
     return temps;
   }
@@ -54,5 +69,6 @@ public class Problem1 {
     System.out.println("The number of temperatures above average is: " + aboveAverage.length);
     System.out.println("The temperatures above average are: ");
     System.out.println(java.util.Arrays.toString(aboveAverage));
+
   }
 }
