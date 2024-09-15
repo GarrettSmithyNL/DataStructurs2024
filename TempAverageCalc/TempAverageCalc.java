@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Problem1 {
+public class TempAverageCalc {
 
   public static double[] getNumOfTemps() {
     Scanner scanner = new Scanner(System.in);
