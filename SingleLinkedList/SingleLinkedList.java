@@ -17,7 +17,7 @@ public class SingleLinkedList {
     Node newNode = new Node(nodeValue);
     if (head == null) {
       createSingleLinkedList(nodeValue);
-      return;
+
     } else if (positionToInsert == 0) {
       newNode.setNextNode(head);
       head = newNode;

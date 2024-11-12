@@ -32,8 +32,6 @@ public class Theater {
     } else {
       return false;
     }
-
-
   }
 
   @Override
